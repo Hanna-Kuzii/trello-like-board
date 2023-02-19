@@ -1,0 +1,26 @@
+.card {
+  background-color: #55a630;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: move;
+}
+.card:hover {
+  background-color: #408520;
+}
+.card:hover .card__addTime {
+  display: block;
+}
+.card__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card__addTime {
+  text-align: right;
+  font-style: italic;
+  font-size: 80%;
+  font-weight: 300;
+  display: none;
+}/*# sourceMappingURL=Card.css.map */

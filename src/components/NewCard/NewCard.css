@@ -1,0 +1,44 @@
+.newCard {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.newCard__content {
+  background-color: #E7EB00;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.newCard__content__buttons {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.buttons {
+  padding-top: 10px;
+  text-align: center;
+}
+.buttons__add {
+  background-color: #657514;
+  margin-right: 5px;
+}
+.buttons__add:hover, .buttons__add :focus {
+  transform: scale(105%);
+}
+.buttons__cancel {
+  background-color: #dae892;
+}
+.buttons__cancel:hover, .buttons__cancel :focus {
+  transform: scale(105%);
+}/*# sourceMappingURL=NewCard.css.map */

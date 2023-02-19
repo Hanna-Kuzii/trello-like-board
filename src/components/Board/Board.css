@@ -1,0 +1,35 @@
+.board {
+  background-color: #80b918;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 15%;
+  height: -moz-min-content;
+  height: min-content;
+}
+.board__header {
+  background-color: #2b9348;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+.board__header__title {
+  margin: auto;
+}
+.board__header__buttons {
+  height: -moz-min-content;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.board__no-list {
+  padding: 5px;
+  font-style: italic;
+}
+.board__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}/*# sourceMappingURL=Board.css.map */

@@ -1,0 +1,58 @@
+[
+  {
+    "todo": [
+      {
+        "id": 1,
+        "title": "doing excersices",
+        "date": "01/02/2023"
+      },
+      {
+        "id": 2,
+        "title": "doing home work",
+        "date": "02/01/2023"
+      }
+    ]
+  },
+  {
+    "doing": [
+      {
+        "id": 3,
+        "title": "watch serial",
+        "date": "12/12/2022"
+      },
+      {
+        "id": 5,
+        "title": "clean home",
+        "date": "02/01/2023"
+      }
+    ]
+  },
+  {
+    "blocked": [
+      {
+        "id": 8,
+        "title": "watch serial",
+        "date": "12/12/2022"
+      },
+      {
+        "id": 6,
+        "title": "clean home",
+        "date": "02/01/2023"
+      }
+    ]
+  },
+  {
+    "done": [
+      {
+        "id": 7,
+        "title": "watch serial",
+        "date": "12/12/2022"
+      },
+      {
+        "id": 11,
+        "title": "clean home",
+        "date": "02/01/2023"
+      }
+    ]
+  }
+]
