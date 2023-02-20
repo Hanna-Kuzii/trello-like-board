@@ -10,11 +10,14 @@ export default function NewCard({ setAddCard, addCardState, addCard }) {
   const handleSubmit = (event) => {
     setItem("");
 
-    addCard({
-      id: Date.now() + Math.random(),
-      title: titleItem,
-      date: new Date(),
-    }, addCardState);
+    addCard(
+      {
+        id: Date.now() + Math.random(),
+        title: titleItem,
+        date: new Date(),
+      },
+      addCardState
+    );
 
     event.preventDefault();
     document.forms[0].reset();

@@ -1,6 +1,6 @@
+import { useState } from "react";
 import Card from "../Card/Card";
 import "./Board.css";
-import * as ReactDOM from "react-dom";
 
 export default function Board({
   board,
@@ -8,13 +8,17 @@ export default function Board({
   setAddCard,
   deleteCard,
   deleteBoard,
-  moveCardToBoard,
+  sort,
 }) {
+  let [sortType, setSortType] = useState(
+    JSON.parse(localStorage?.getItem(`sortType ${board}`)) || ""
+  );
+
   function addTime(startTime) {
     let end = new Date().getTime();
     let start = new Date(startTime).getTime();
     let timeAdd = end - start;
-    timeAdd = timeAdd / 1000; // second
+    timeAdd = timeAdd / 1000;
     let time = "";
 
     if (timeAdd / 604800.02 > 4) {
@@ -41,21 +45,57 @@ export default function Board({
         <h3 className="board__header__title">{board.title}</h3>
         <div className="board__header__buttons">
           <button
-            className="board__header__button"
+            className="board__header__buttons-item"
             onClick={() => {
               deleteBoard(board.id);
             }}
           >
-            del
+            delete board
           </button>
           <button
-            className="board__header__button"
+            className="board__header__button-item"
             onClick={() => setAddCard((addCardState = board.id))}
           >
-            add
+            add task
           </button>
         </div>
       </div>
+
+      {board.list.length != 0 && (
+        <div className="board__sort">
+          <fieldset className="board__sort">
+            <legend>Sort:</legend>
+            <div className="radiobuttons">
+              <div className="radiobutton">
+                <input
+                  type="radio"
+                  id="newest"
+                  name="sort"
+                  value="newest"
+                  onChange={(event) => {
+                    setSortType((sortType = event.target.value));
+                    sort(sortType, board.id);
+                  }}
+                />
+                <label for="newest">Newest</label>
+              </div>
+              <div className="radiobutton">
+                <input
+                  type="radio"
+                  id="older"
+                  name="sort"
+                  value="older"
+                  onChange={(event) => {
+                    setSortType((sortType = event.target.value));
+                    sort(sortType, board.id);
+                  }}
+                />
+                <label for="older">Older</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      )}
 
       <div className="board__list">
         {board.list.length === 0 && (
@@ -63,6 +103,7 @@ export default function Board({
             There are no tasks yet
           </div>
         )}
+        {console.log(board.list)}
         {board.list.map((card) => (
           <div
             className="card"

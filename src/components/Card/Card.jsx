@@ -1,9 +1,8 @@
 import "./Card.css";
 
-export default function Card({ card, deleteCard, addTime, boardId, keyProp }) {
+export default function Card({ card, deleteCard, addTime, boardId }) {
   return (
     <>
-    
       <div className="card__title">
         <div className="card__title-header">{card.title}</div>
         <button

@@ -6,11 +6,15 @@
   height: -moz-min-content;
   height: min-content;
 }
+.board:hover .board__sort {
+  display: block;
+}
 .board__header {
   background-color: #2b9348;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 5px;
   padding: 5px;
 }
 .board__header__title {
@@ -23,6 +27,14 @@
   flex-direction: column;
   gap: 5px;
 }
+.board__sort {
+  padding: 5px;
+  text-align: center;
+  display: none;
+}
+.board__sort-title {
+  margin-right: 5px;
+}
 .board__no-list {
   padding: 5px;
   font-style: italic;
@@ -32,4 +44,8 @@
   flex-direction: column;
   gap: 5px;
   padding: 5px;
+}
+
+.radiobuttons {
+  display: inline;
 }/*# sourceMappingURL=Board.css.map */

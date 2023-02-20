@@ -8,13 +8,23 @@
     flex-direction: row;
     justify-content: space-between;
 
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 5px;
+      justify-content: center;
+      text-align: center;
+    }
+
     &__title {
       margin: 0;
     }
     &__button {
-      padding: 10px 15px;
+      padding: 10px 20px;
       background-color: #007f5f;
       border: none;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 20px;
     }
   }
   &__no-list {
@@ -25,22 +35,25 @@
   &__list {
     display: flex;
     flex-direction: row;
-    // justify-content: space-between;
     gap: 25px;
     flex-wrap: wrap;
     padding: 10px;
     background-color: #aacc00;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      text-align: center;
+    }
 
     &__item {
       flex-grow: 1;
       flex-shrink: 1;
       flex-basis: 15%;
       height: min-content;
-    
     }
-
   }
-
 }
 
 .selected {

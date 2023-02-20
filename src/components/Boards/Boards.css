@@ -8,13 +8,24 @@
   flex-direction: row;
   justify-content: space-between;
 }
+@media (max-width: 600px) {
+  .boards__header {
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    text-align: center;
+  }
+}
 .boards__header__title {
   margin: 0;
 }
 .boards__header__button {
-  padding: 10px 15px;
+  padding: 10px 20px;
   background-color: #007f5f;
   border: none;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
 }
 .boards__no-list {
   padding: 5px;
@@ -27,6 +38,14 @@
   flex-wrap: wrap;
   padding: 10px;
   background-color: #aacc00;
+}
+@media (max-width: 500px) {
+  .boards__list {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+  }
 }
 .boards__list__item {
   flex-grow: 1;

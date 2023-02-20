@@ -7,7 +7,7 @@
   cursor: move;
 
   &:hover {
-  background-color: #408520;
+    background-color: #408520;
     & .card__addTime {
       display: block;
     }
@@ -17,13 +17,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    &-header{
-
-    }
-    &-delete{
-      
-    }
   }
 
   &__addTime {
@@ -32,8 +25,5 @@
     font-size: 80%;
     font-weight: 300;
     display: none;
-
-
   }
 }
-

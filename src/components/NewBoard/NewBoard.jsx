@@ -1,8 +1,7 @@
-import { useState } from 'react';
-import './NewBoard.css'
+import { useState } from "react";
+import "./NewBoard.css";
 
-export default function NewBoard({ addBoardState,  setAddBoard, addBoard }) {
-
+export default function NewBoard({ addBoardState, setAddBoard, addBoard }) {
   const [titleItem, setItem] = useState("");
   const handleChangeItem = (event) => {
     setItem(event.target.value);
@@ -25,9 +24,9 @@ export default function NewBoard({ addBoardState,  setAddBoard, addBoard }) {
   return (
     <div className="newBoard">
       <div className="newBoard__content">
-      <div className="newBoard__content__header">What is the board name?</div>
-        <form action=""  onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChangeItem} />
+        <div className="newBoard__content__header">What is the board name?</div>
+        <form action="" onSubmit={handleSubmit}>
+          <input type="text" onChange={handleChangeItem} />
           <div className="newBoard__content__buttons  buttons">
             <button
               type="submit"
@@ -46,6 +45,5 @@ export default function NewBoard({ addBoardState,  setAddBoard, addBoard }) {
         </form>
       </div>
     </div>
-  ) 
-  
-  }
+  );
+}

@@ -14,6 +14,7 @@ export default function Boards({
   addBoard,
   deleteBoard,
   moveCardToBoard,
+  sort,
 }) {
   return (
     <>
@@ -78,7 +79,6 @@ export default function Boards({
                       }
                     });
                     if (!card) {
-                      console.log("fail");
                       boards.forEach((board) => {
                         board.list.forEach((item) => {
                           if (item.id == cardId) {
@@ -106,6 +106,7 @@ export default function Boards({
                   deleteCard={deleteCard}
                   deleteBoard={deleteBoard}
                   moveCardToBoard={moveCardToBoard}
+                  sort={sort}
                 />
               </div>
             ))}

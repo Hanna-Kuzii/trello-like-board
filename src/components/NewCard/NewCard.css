@@ -10,7 +10,7 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 .newCard__content {
-  background-color: #E7EB00;
+  background-color: #e7eb00;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
@@ -33,12 +33,14 @@
   background-color: #657514;
   margin-right: 5px;
 }
-.buttons__add:hover, .buttons__add :focus {
+.buttons__add:hover,
+.buttons__add :focus {
   transform: scale(105%);
 }
 .buttons__cancel {
   background-color: #dae892;
 }
-.buttons__cancel:hover, .buttons__cancel :focus {
+.buttons__cancel:hover,
+.buttons__cancel :focus {
   transform: scale(105%);
 }/*# sourceMappingURL=NewCard.css.map */
