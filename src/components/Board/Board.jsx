@@ -61,7 +61,7 @@ export default function Board({
         </div>
       </div>
 
-      {board.list.length != 0 && (
+      {board.list.length !== 0 && (
         <div className="board__sort">
           <fieldset className="board__sort">
             <legend>Sort:</legend>
@@ -103,7 +103,6 @@ export default function Board({
             There are no tasks yet
           </div>
         )}
-        {console.log(board.list)}
         {board.list.map((card) => (
           <div
             className="card"

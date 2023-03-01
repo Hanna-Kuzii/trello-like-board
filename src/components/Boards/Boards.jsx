@@ -43,16 +43,17 @@ export default function Boards({
                 }}
                 onDragEnd={(event) => {
                   event.target.classList.remove(`selected`);
-                  event.currentTarget.classList.remove("active");
                 }}
                 onDragOver={(event) => {
                   event.preventDefault();
                 }}
                 onDrop={(event) => {
                   event.preventDefault();
+                  
                   const eventEnd = event.currentTarget;
-                  const boardsStartId =
-                    document.querySelector(".active").dataset.key;
+                  const boardsStartId = document.querySelector(".active").dataset.key;
+                  const active = document.getElementsByClassName("active")[0];
+                  active.classList.remove("active");
                   const boardsEndId = eventEnd.dataset.key;
 
                   const activeCard =
@@ -89,7 +90,6 @@ export default function Boards({
                       deleteCard(boardsStartId, cardId);
                     }
                   }
-
                   if (boardsStartId != boardsEndId) {
                     addCard(card, boardsEndId);
                     deleteCard(boardsStartId, cardId);
